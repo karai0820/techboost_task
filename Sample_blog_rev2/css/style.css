@@ -61,7 +61,7 @@ header{
 }
 
 
-.blog_container:after{
+.blog-container:after{
 	clear:both;
 	display: block;
 	content: " ";
@@ -79,27 +79,27 @@ header{
 
 .blog-sentence{
 float: left;
-margin-left:10px;
+margin:0 5px;
 width:65%;
 
 }
 
-.blog_day {
+.blog-day {
 	font-size: 15px;
 	color: gray;
 	margin:10px 0;
 }
 
-.blog_title{
+.blog-title{
 	font-size: 20px;
 	color:blue;
 	margin: 0;
 	
 }
 
-.blog_summary{
-	font-size: 10px;
-	margin-bottom: 20px;
+.blog-summary{
+	font-size: 12px;
+	
 }
 
 .right-contents{
