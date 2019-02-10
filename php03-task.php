@@ -10,14 +10,22 @@ if ($name == "Kentaro Arai") {
 }
 
 echo "\n";
-/*2,for文を使って、1から10000までの合計の値を表示してください。*/
-$total = 1;
-for($i=2; $i<=10000; $i++){
+
+
+
+/*
+2,for文を使って、1から10000までの合計の値を表示してください。*/
+$total = 0;
+for($i=1; $i<=10000; $i++){
 	$total += $i;
 }
 echo $total;
 
 echo"\n";
+
+
+
+
 /*3,$fruits に配列で好きなフルーツを5個代入し、foreach文で順番に出力してください。*/
 $fruits = array('apple','orange','peach','pineapple','banana');
 
@@ -26,6 +34,9 @@ foreach($fruits as $fruit){
 	echo "\n";
 
 }
+
+
+
 
 /*4.　【応用】 次のプログラムのバグを修正し、1から100までの間で5の倍数のみ表示するようにしてみてください。
 /*

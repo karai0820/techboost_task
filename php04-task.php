@@ -10,6 +10,8 @@ echo second($i);
 echo "\n";
 //出力 =>4
 
+
+
 /*2.$a と $b を仮引数に持ち、　$a と $b　を足した結果を返す関数を作成してください。
 
 　参考）引数は下記のように指定すると、複数の仮引数を使うことができます。
@@ -31,10 +33,12 @@ echo sum($a,$b);
 echo "\n";
 //出力 =>4
 
+
+
 /*3.$arr という配列の仮引数を持ち、数値が入った配列array(1, 3, 5 ,7, 9) を渡すとその要素をすべてかけた結果を返す関数を作成してください。*/
 function times($arr){
-	$result = $arr[0];
-	for($i=1;$i<count($arr);$i++){
+	$result = 1;
+	for($i=0;$i<count($arr);$i++){
 		$result *= $arr[$i];
 }
 return $result;
@@ -71,9 +75,12 @@ function max_array($arr){
  return $max_number;
 }
 
-$arr=array(2,3,6,8);
+$arr=array(2,8,6,4,7);
 echo max_array($arr);
 //出力 =>8
+
+
+
 
 /*5.次のビルトイン関数の用途、使い方を調べて実際に使ってみてください。*/
 
