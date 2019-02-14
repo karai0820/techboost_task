@@ -1,0 +1,26 @@
+1、Viewは何をするところでしょうか。簡潔に説明してみてください。
+ControllerがModelとやり取りして得られた結果を受け取り、ユーザーのブラウザに表示するデータを生成する。
+
+
+2 、プログラマーがhtmlを書かずにPHPなどのプログラミング言語やフレームワークを使う必要があるのはどういった理由でしょうか。
+HTMLを直接記述すると表現できるのは決まったものだけとなってしまい、ユーザーに合わせた内容を表示できない。これを可能とするのがPHPやLaravelなどの動的プログラミング言語やフレームワークとなる。
+
+
+3、 【応用】 前々章でAdmin/ProfileControllerのadd Action, edit Action に次のように記述しました。
+
+  public function add()
+  {
+      return view('admin.profile.create');
+  }
+  public function edit()
+  {
+      return view('admin.profile.edit');
+  }
+この場合、add Action と edit Action を描画するには、それぞれどこのディレクトリに何というbladeファイルを設置すれば良いでしょうか。
+
+mynews/resources/views/admin/profileディレクトリにcreate.blade.phpおよびedit.blade.phpファイルを設置すればよい
+
+
+4 【応用】 3. の答えを実際に作成してみましょう。また、作成したbladeファイルにhtmlで記述して装飾してみましょう。
+→create.blade.phpファイル参照
+→edit.blade.phpファイル参照
