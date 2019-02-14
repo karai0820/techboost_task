@@ -1,0 +1,30 @@
+1、ControllerとRoutingについてわからないことを書き出してメンターに質問してみましょう。
+
+・テキストではContorollerをAdminディレクトリ配下に作成したが、直接Conttollersディレクトリ配下に作ってもよいか？
+
+・テキストではRoutingの際に
+Route::group(['prefix'] =>['admin'],function(){
+	Route::get('news/create','Admin\NewsController');
+});
+と記述したが、この時のprefixの意味、function（）の意味は何か？
+
+・Controller.phpに記載されている以下のコードの内容の意味
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+class NewsController extends Controller
+
+・Controller.phpに記述する際に
+public function add(){	}としたが、このpublicの意味。
+また、課題の中でActionの中身にviewとredirectがあるが、redirectとは？
+
+２、Controllerの役割について、説明してください。
+Routingから渡されたアクセスを受けて、Modelとviewの仲介をする。データベースとなるModelと相互にやり取り、データの呼び出しや保存を行い、viewに結果を渡す。
+
+
+３、ControllerとRoutingの役割について、説明してください。
+両者はユーザーからのアクセスを受け取る役割を担う。アクセスをRoutingが受け取り、Controllerの各Actionに渡す。これをControllerがModelとviewに渡す事でデータベースの呼び出しやブラウザへの反映ができる。
+
+
+４、【応用】　artisanを使って、Admin/ProfileControllerを作成しましょう。
+５、【応用】 Admin/ProfileControllerに、以下のadd, create, edit, update それぞれのActionを追加してみましょう。
+→ProfileController.phpファイル参照
