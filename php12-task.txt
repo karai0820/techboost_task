@@ -1,0 +1,36 @@
+1.Bladeテンプレートで、埋め込みたい箇所に利用するワードは何だったでしょうか? @yield('XXX');
+
+
+2.Webpackで使われているBootstrapやSCSSはどういったものか、調べられる範囲で調べてみましょう。 
+Bootstrap:Twitter社が開発したフロントエンドフレームワーク。Webデザインを作成する際は通常であればすべてのデザインに対するCSSを定義する必要があるが、Bootstrapではよく使われるスタイルがあらかじめ定義してあるので、ルールに沿って利用するだけで整ったデザインのページを作成できます。レスポンシブWebデザインに対応しており、ブラウザの横幅サイズを判断基準として、レイアウトデザインを柔軟に調整することが可能。
+
+SCSS:Sass（Syntactically Awesome Stylesheets）の構文の一つ。元々はSASS記法が用いられていたが、CSSとの互換性に乏しい事から、後にSCSS(Sassy CSS)記法が追加された。CSSと記法が近く、 {  } でブロックを、セミコロン(;)で文末を示す。
+
+
+3. 【応用】 resources/views/layouts/admin.blade.php をコピーして profile.blade.php を resources/layoutsに作成しましょう。また、以下の部分を下の※1のように修正しましょう。
+→profile.blade.php参照
+
+4. 【応用】 プロフィール作成画面用に、resources/views/admin/profile/create.blade.php ファイルを作 成し、3. で作成した profile.blade.phpファイルを読み込み、また プロフィールのページであることがわ かるように titleとcontentを編集しましょう。(ヒント: resources/views/admin/news/create.blade.php を 参考にします。)
+→create.blade.php参照
+
+5. 【応用】 resources/sass/admin.scss をコピーして profile.scss をresources/sassに作成しましょう。後ほ どこちらは課題で編集します。
+→キャプチャ画像参照
+
+6. 【応用】 webpack.mix.jsを編集して、profile.scss をコンパイルするように編集してみましょう。
+→webpack.mix.js参照
+
+
+7. 【応用】 7. ができたら、実際に npm run watch コマンドでコンパイルしてみましょう。
+→キャプチャ画像参照
+
+
+8. 【応用】 8. ができたら、ブラウザで localhost:8000/admin/profile/createでプロフィール作成画面が表 示されるか確認しましょう。
+→キャプチャ画像参照
+
+
+※1
+
+        {{-- 次の1行を削除 --}}
+        <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
+        {{-- 次の1行を追記 --}}
+        <link href="{{ asset('css/profile.css') }}" rel="stylesheet">

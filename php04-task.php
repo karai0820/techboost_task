@@ -39,8 +39,10 @@ echo "\n";
 function times($arr){
 	$result = 1;
 	for($i=0;$i<count($arr);$i++){
-		$result *= $arr[$i];
-}
+        $result*=$arr[$i];
+
+    }
+
 return $result;
 }
 
@@ -78,7 +80,6 @@ function max_array($arr){
 $arr=array(2,8,6,4,7);
 echo max_array($arr);
 //出力 =>8
-
 
 
 
