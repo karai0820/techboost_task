@@ -24,10 +24,10 @@
         <label class="col-md-2" for= "gender">性別</label>
         <div class="col-md-10">
         男性
-        <input type="radio" name="gender" value="male" id="gender" {{ old('gender')==male ? 'checked':''}}>
+        <input type="radio" name="gender" value="male" id="gender" {{ old('gender')=='male' ? 'checked':''}}>
         <br>
         女性
-        <input type="radio" name="gender" value="female" id="gender" {{old('gender')==female ? 'cheked': ''}}>
+        <input type="radio" name="gender" value="female" id="gender" {{old('gender')=='female' ? 'cheked': ''}}>
         </div>
     </div>
     <div class="form-group row">
@@ -39,7 +39,7 @@
     <div class="form-group row">
        <label class="col-md-2" for= "introduction">自己紹介欄</label>
         <div class ="col-md-10">
-       <textarea class="form-control" rows="20" name="introduction">{{old('introduction')}}</textarea>
+       <textarea class="form-control" rows="20" name="introduction"{{old('introduction')}}></textarea>
         </div>
     </div>
     {{csrf_field()}}
