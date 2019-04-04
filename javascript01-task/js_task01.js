@@ -59,7 +59,8 @@ var i = 0;
 var anima = prompt();
 while(i<animal.length){
 	if(anima=="ライオン"){
-		alert(animal[1]);
+		animal_number = animal.indexOf('ライオン') ;
+		alert(animal_number);
 		break;
 	}
 	alert(animal[i]);
